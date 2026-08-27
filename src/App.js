@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Relogio from "./componentes/Relogio";
+import Timer from "./componentes/Timer";
 
-function App() {
+export default function App() {
+  const [exibirRelogio, setExibirRelogio] = useState(true);
+  const [exibirTimer, setExibirTimer] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: '20px' }}>
+      <h1>Relógio</h1>
+
+      {/* Controles do Relógio */}
+      <section style={{ marginBottom: '20px' }}>
+        <button onClick={() => setExibirRelogio(prev => !prev)}>
+          {exibirRelogio ? 'Desmontar Relógio' : 'Montar Relógio'}
+        </button>
+        {exibirRelogio && <Relogio />}
+      </section>
+
+      <hr />
+
+      {/* Controles do Timer */}
+      <section style={{ marginTop: '20px' }}>
+        <button onClick={() => setExibirTimer(prev => !prev)}>
+          {exibirTimer ? 'Desmontar Timer' : 'Montar Timer'}
+        </button>
+        {exibirTimer && <Timer tempoInicial={0} />}
+      </section>
     </div>
   );
 }
-
-export default App;
