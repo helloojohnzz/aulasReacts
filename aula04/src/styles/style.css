@@ -1,0 +1,201 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  text-align: center;
+  background-color: #0f0f0f;
+  border: 1px solid #1f1f1f;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  border-radius: 6px;
+}
+
+.main-title {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #991b1b;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+/* --- COMPONENTE: PLACAR --- */
+.placar-container {
+  margin: 20px 0 30px 0;
+}
+
+.placar-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.time-card {
+  flex: 1;
+  padding: 20px;
+  background-color: #141414;
+  border: 1px solid #262626;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.time-card.ativo {
+  border: 2px solid #b91c1c;
+  background-color: #1a0909;
+  box-shadow: 0 0 20px rgba(185, 28, 28, 0.35);
+}
+
+.time-nome {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #a1a1aa;
+  margin-bottom: 8px;
+}
+
+.time-pontos {
+  font-size: 44px;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.time-card.ativo .time-pontos {
+  color: #ef4444;
+}
+
+.ataque-status {
+  margin-top: 25px;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #d1d5db;
+}
+
+.ataque-destaque {
+  color: #ef4444;
+  font-weight: bold;
+}
+
+/* --- COMPONENTE: ACOES JOGO --- */
+.acoes-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.btn-red {
+  background-color: #991b1b;
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-red:hover {
+  background-color: #dc2626;
+}
+
+.btn-red:active {
+  transform: scale(0.97);
+}
+
+.btn-red-outline {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 12px 20px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+.btn-red-outline:hover {
+  background-color: #ffffff;
+  color: #0a0a0a;
+}
+
+.btn-red-outline:active {
+  transform: scale(0.97);
+}
+
+/* --- COMPONENTE: HISTORICO --- */
+.historico-container {
+  margin-top: 40px;
+  border-top: 1px solid #262626;
+  padding-top: 25px;
+}
+
+.historico-titulo {
+  font-size: 14px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #991b1b;
+  margin-bottom: 15px;
+}
+
+.historico-vazio {
+  color: #52525b;
+  font-style: italic;
+  font-size: 13px;
+}
+
+.historico-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 400px;
+  text-align: left;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.historico-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #1a1a1a;
+  color: #d4d4d8;
+}
+
+.historico-bullet {
+  color: #ef4444;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.vencedor-banner {
+  background-color: #991b1b;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(220, 38, 38, 0.5);
+  animation: pulse 1.5s infinite alternate;
+}
