@@ -1,0 +1,21 @@
+{
+  "chamados": [
+    {
+      "id": "1",
+      "nome": "Maria Silva",
+      "setor": "Financeiro",
+      "tipoProblema": "Software",
+      "descricao": "Planilha não abre mais",
+      "prioridade": "Alta"
+    },
+    {
+      "nome": "João",
+      "setor": "TI",
+      "tipoProblema": "Hardware",
+      "descricao": "Não funciona",
+      "prioridade": "Média",
+      "id": "5UtayYGPXbs"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
